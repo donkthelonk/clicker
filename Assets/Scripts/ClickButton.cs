@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ClickButton : MonoBehaviour {
 
-	public Button clickButton;
 	public Text currentValue;
 
 	public int value;
