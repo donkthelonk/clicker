@@ -7,7 +7,7 @@ public class ClickButton : MonoBehaviour {
 
 	public Text currentValue;
 
-	public int value;
+	public long value;
 
 	// Use this for initialization
 	void Start () {
