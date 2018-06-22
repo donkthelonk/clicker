@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class ClickButton : MonoBehaviour {
 
-	public Text currentValue;
+	public Text ClickCount;
 
-	public long value;
+	private long value = 0;
 
 	// Use this for initialization
 	void Start () {
-		value = 0;
-		currentValue.text = value.ToString();
+		
 	}
 	
 	// Update is called once per frame
@@ -20,8 +19,18 @@ public class ClickButton : MonoBehaviour {
 		
 	}
 
-	public void OnClick() {
+	public void OnClickButton() {
 		value++;
-		currentValue.text = value.ToString();
+		ClickCount.text = value.ToString();
+	}
+
+	public void IncCountByOnePerSec(){
+		InvokeRepeating("IncCountByOne", 1.0f, 1.0f);
+	}
+
+	void IncCountByOne(){
+		value = long.Parse(ClickCount.text);
+		value++;
+		ClickCount.text = value.ToString();
 	}
 }

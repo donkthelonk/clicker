@@ -11,7 +11,7 @@ public class PlusOneClickPerSec : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//value = long.Parse(ClickCount.text);
 	}
 	
 	// Update is called once per frame
